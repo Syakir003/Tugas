@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hasil Input Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #eef2f3;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+    .label {
+      font-weight: bold;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Hasil Data yang Dikirim</h2>
+    <p><span class="label">Nama:</span> <span id="out-nama"></span></p>
+    <p><span class="label">Email:</span> <span id="out-email"></span></p>
+    <p><span class="label">Pesan:</span> <span id="out-pesan"></span></p>
+  </div>
+
+  <script>
+    // Ambil data dari query string (?nama=...&email=...&pesan=...)
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("out-nama").textContent = params.get("nama") || "-";
+    document.getElementById("out-email").textContent = params.get("email") || "-";
+    document.getElementById("out-pesan").textContent = params.get("pesan") || "-";
+  </script>
+</body>
+</html>
