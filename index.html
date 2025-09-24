@@ -365,6 +365,7 @@
     </div>
   </div>
 
+<<<<<<< HEAD
   <script>
     let formData = {
       nama: '',
@@ -404,6 +405,21 @@
         submitForm();
       });
     });
+=======
+  <h2>Formulir Input Data</h2>
+  <form action="data-hasil.html" method="get">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="pesan">Pesan:</label>
+    <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+    <button type="submit">Kirim Data</button>
+  </form>
+>>>>>>> a42269dae0572c0ef86e99abea1b1c8dcf622d2b
 
     function nextStep(step) {
       if (step === 2 && !validateStep1()) return;
